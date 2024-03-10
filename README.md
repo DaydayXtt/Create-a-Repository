@@ -30,6 +30,7 @@ Main reference: https://blog.csdn.net/qq_44998513/article/details/133828886
 # Step2. Upload project to Github
 ## 登陆Github官网 -> 头像 -> Settings -> Your repositories -> New
 ![image](https://github.com/DaydayXtt/Create-a-Repository/blob/main/pics/Git_1.png)
+
 Enter your **Repository name** and the corresponding **Description** .
 The others are default.
 
@@ -49,7 +50,7 @@ The others are default.
 ## 刷新Github官网，发现 **README.md** 已上传成功
 ![image](https://github.com/DaydayXtt/Create-a-Repository/blob/main/pics/Git_2.png)
 
-5. 若要上传文件夹中所有文件，输入以下：
+## 若要上传文件夹中所有文件，输入以下：
     git add . 
     git commit -m "first commit"
     git push -u origin main
