@@ -1,26 +1,36 @@
 # Create-a-Repository
+
 Main reference: https://blog.csdn.net/qq_44998513/article/details/133828886
+
 # Step1. Create SSH keys
-## 登陆Github官网 -> 头像 -> Settings -> SSH and GPG keys-> New SSH key
+
+## 1.登陆Github官网 -> 头像 -> Settings -> SSH and GPG keys-> New SSH key
+
 ![image](https://github.com/DaydayXtt/Create-a-Repository/blob/main/pics/SSH_1.png)
+
 一般为空，此处作者先前已经配置。
 
-## **Title** isn't matter. **Key type** is Authentication Key.
+## 2. **Title** isn't matter. **Key type** is Authentication Key.
+
 ![image](https://github.com/DaydayXtt/Create-a-Repository/blob/main/pics/SSH_2.png)
 
-## Type in "ssh-keygen -t rsa -C YOUR_EMAIL in Terminal:
+## 3. Type in "ssh-keygen -t rsa -C YOUR_EMAIL in Terminal:
     ssh-keygen -t rsa -C YOUR_EMAIL
+
 "YOUR_EMAIL" is the E-mail of your account.
 
-## 前往 ~/.ssh/id_rsa.pub文件，将其中的内容复制到“1.”中的 **Key** :
+## 4.前往 ~/.ssh/id_rsa.pub文件，将其中的内容复制到“1.”中的 **Key** :
+
 ![image](https://github.com/DaydayXtt/Create-a-Repository/blob/main/pics/SSH_3.png)
 
-## 设置本地 git 的用户名和邮箱，Terminal输入(保留双引号 **""** ):
+## 5. 设置本地 git 的用户名和邮箱，Terminal输入(保留双引号 **""** ):
     git config --global user.name "yourname"
     git config --global user.email "email@email.com"
-## Type in "ssh -T git@github.com" in Termial:
+## 6. Type in "ssh -T git@github.com" in Termial:
     ssh -T git@github.com
+
 提示如下信息，说明成功连接Github。
+
 ![image](https://github.com/DaydayXtt/Create-a-Repository/blob/main/pics/SSH_4.png)
 
 否则，输入以下内容，再重新连接：
@@ -28,16 +38,18 @@ Main reference: https://blog.csdn.net/qq_44998513/article/details/133828886
     ssh-add ~/.ssh/id_rsa
 
 # Step2. Upload project to Github
-## 登陆Github官网 -> 头像 -> Settings -> Your repositories -> New
+## 1.登陆Github官网 -> 头像 -> Settings -> Your repositories -> New
+
 ![image](https://github.com/DaydayXtt/Create-a-Repository/blob/main/pics/Git_1.png)
 
 Enter your **Repository name** and the corresponding **Description** .
 The others are default.
 
-## Click **Create repository** , 弹出如下界面：
+## 2.Click **Create repository** , 弹出如下界面：
+
 ![image](https://github.com/DaydayXtt/Create-a-Repository/blob/main/pics/Quick%20start.png)
 
-## 定位到文件加目录。Copy the following codes and fix to your project's name in Terminal:
+## 3.定位到文件加目录。Copy the following codes and fix to your project's name in Terminal:
 
     echo "# project_name" >> README.md
     git init
@@ -47,10 +59,12 @@ The others are default.
     git remote add origin git@github.com:xygxgn/project_name.git
     git push -u origin main
 
-## 刷新Github官网，发现 **README.md** 已上传成功
+## 4.刷新Github官网，发现 **README.md** 已上传成功
+
 ![image](https://github.com/DaydayXtt/Create-a-Repository/blob/main/pics/Git_2.png)
 
-## 若要上传文件夹中所有文件，输入以下：
+## 5.若要上传文件夹中所有文件，输入以下：
+
     git add . 
     git commit -m "first commit"
     git push -u origin main
