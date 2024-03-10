@@ -15,7 +15,7 @@ Main reference: https://blog.csdn.net/qq_44998513/article/details/133828886
 4. 前往 ~/.ssh/id_rsa.pub文件，将其中的内容复制到“1.”中的 **Key** :
 ![image](https://github.com/DaydayXtt/Create-a-Repository/blob/main/pics/SSH_3.png)
 
-5. 设置本地 git 的用户名和邮箱，Terminal输入(保留双引号 **""** )：
+5. 设置本地 git 的用户名和邮箱，Terminal输入(保留双引号 **""** ):
     git config --global user.name "yourname"
     git config --global user.email "email@email.com"
 6.Type in "ssh -T git@github.com" in Termial:
@@ -49,7 +49,7 @@ The others are default.
 ![image](https://github.com/DaydayXtt/Create-a-Repository/blob/main/pics/Git_2.png)
 
 5. 若要上传文件夹中所有文件，输入以下：
-    git add . 
-    git commit -m "first commit"
-    git push -u origin main
+    ## git add . 
+    ## git commit -m "first commit"
+    ## git push -u origin main
     
